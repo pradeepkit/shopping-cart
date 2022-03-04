@@ -1,0 +1,21 @@
+<h1>Product Listing</h1>
+<table>
+  <tr>
+    <th>Product ID</th>
+    <th>Title</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let product of productList">
+    <td>{{product.id}}</td>
+    <td>{{product.title}}</td>
+    <td>{{product.quantity}}</td>
+    <td>{{product.price}}</td>
+    <td >
+      <button (click)="addInCart(product)">
+        +
+      </button>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,6 @@
+.mainDiv{
+    display: flex;
+}
+.mainDiv div {
+    padding: 30px;
+}
