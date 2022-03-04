@@ -13,7 +13,7 @@
     <td>{{product.quantity}}</td>
     <td>{{product.price}}</td>
     <td >
-      <button (click)="addInCart(product)">
+      <button [disabled]="!product.quantity" (click)="addInCart(product)">
         +
       </button>
     </td>
