@@ -1,0 +1,59 @@
+<div fxLayoutAlign="flex-start" fxLayout="row wrap" fxLayoutGap="10px">
+    <form [formGroup]="empForm" novalidate>
+        <!-- Name -->
+        <div class="formControlsClass">
+            <app-input [formGroup]="empForm" name="first_name" [required]="true" placeholder="First Name">
+            </app-input>
+
+
+            <app-input [formGroup]="empForm" name="last_name" [required]="true" placeholder="Last Name">
+            </app-input>
+            <!-- Email -->
+            <app-input [formGroup]="empForm" name="email" [required]="true" placeholder="Email">
+            </app-input>
+        </div>
+
+
+
+
+        <div class="formControlsClass">
+            <app-input [formGroup]="empForm" name="contact_number" [required]="true" placeholder="Contact number">
+            </app-input>
+
+            <app-input [formGroup]="empForm" name="altl_contact_number" [required]="false"
+                placeholder=" Alternate Contact number (Optional)">
+            </app-input>
+
+            <!-- Designation -->
+            <mat-form-field>
+                <mat-label>Designation</mat-label>
+                <mat-select formControlName="designation">
+                    <mat-option [value]="design" *ngFor="let design of designationArray">{{ design }}
+                    </mat-option>
+                </mat-select>
+                <mat-error>Designation is required
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="formControlsClass">
+            <app-input [formGroup]="empForm" name="temporary_address" [required]="true" placeholder="Temporary address">
+            </app-input>
+            <section class="example-section">
+                <mat-checkbox class="example-margin" formControlName="same_add_check">Same as permanent address
+                </mat-checkbox>
+            </section>
+        </div>
+        <div class="formControlsClass">
+            <app-input [formGroup]="empForm" name="permanent_address" [required]="true" placeholder="Permanent address">
+            </app-input>
+        </div>
+
+
+        <!-- Submit -->
+        <div class="button-wrapper">
+            <button mat-flat-button color="primary" (click)="submitForm()">{{isAddRow ? 'Add More' : 'Update
+                Employee'}}</button>
+        </div>
+    </form>
+</div>

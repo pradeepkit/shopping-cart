@@ -1,0 +1,10 @@
+<mat-form-field [formGroup]="formGroup" class="example-full-width">
+    <input matInput [name]="name" [type]="type" [placeholder]="placeholder" [formControlName]="name">
+
+    <mat-error>
+        <app-input-error [formGroup]="formGroup" [control]="control" [formErrors]="formErrors"
+            [placeholder]="errorPlaceholder ? errorPlaceholder : placeholder">
+
+        </app-input-error>
+    </mat-error>
+</mat-form-field>

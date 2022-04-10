@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CartListComponent } from './cart-list.component';
+import { ConfirmBoxComponent } from './confirm-box.component';
 
-describe('CartListComponent', () => {
-  let component: CartListComponent;
-  let fixture: ComponentFixture<CartListComponent>;
+describe('ConfirmBoxComponent', () => {
+  let component: ConfirmBoxComponent;
+  let fixture: ComponentFixture<ConfirmBoxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CartListComponent ]
+      declarations: [ ConfirmBoxComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CartListComponent);
+    fixture = TestBed.createComponent(ConfirmBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

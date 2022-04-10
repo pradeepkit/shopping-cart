@@ -1,0 +1,23 @@
+<div class="main-div">
+    <div class="main-heading">
+        <h3>Hii {{hrManager}}</h3>
+    </div>
+    <div class="table-div">
+        <app-table [dataSource]="dataSource" [columnsToDisplay]="columnsToDisplay"
+            [columnsToDisplayList]="columnsToDisplayList" [columnsToDisplayHead]="columnsToDisplayHead">
+
+        </app-table>
+    </div>
+
+
+    <div class="example-button-row" *ngIf="!isAddRow">
+        <button mat-raised-button color="primary" (click)="AddNewRow()">
+            <mat-icon class="add-button">add_box</mat-icon> Add More
+        </button>
+    </div>
+    <br />
+    <div *ngIf="isAddRow" class="addRowClass">
+        <app-add-employee [isAddRow]="true" (addEmployee)="addEmployee($event)">
+        </app-add-employee>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<span *ngIf="controlError.code === 'required'">
+    {{placeholder}} <span>is required</span>
+</span>
+
+<span *ngIf="controlError.code === 'email'">
+    Please enter a valid email address!
+</span>
+
+<span *ngIf="controlError.code === 'minlength'">
+    Symbols count should be more then or equal to {{controlError.message.requiredLength}}
+</span>
+
+<span *ngIf="controlError.code === 'maxlength'">
+    Symbols count should not be more then to {{controlError.message.requiredLength}}
+</span>
+<span *ngIf="controlError.code === 'pattern'">
+    Please enter a valid pattern!
+</span>
